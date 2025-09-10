@@ -1,26 +1,30 @@
-Neural Network from Scratch (2-Layer)
-A simple yet powerful implementation of a 2-layer neural network built from scratch in Python using NumPy. This project trains the model on the synthetic make_moons dataset to classify points into two classes, demonstrating core concepts like forward propagation, backpropagation, and the Adam optimizer.
+NeuralNetScratch
+A simple yet powerful 2-layer neural network built from scratch in Python using NumPy. This project trains on the synthetic make_moons dataset to classify points into two classes, demonstrating core concepts like forward propagation, backpropagation, and the Adam optimizer.
 
 📖 Overview
-This repository provides an educational implementation of a 2-layer neural network without relying on high-level frameworks like TensorFlow or PyTorch. It includes:
+This repository provides an educational implementation of a 2-layer neural network without high-level frameworks like TensorFlow or PyTorch. It includes:
 
 Forward Propagation: Computes predictions through the network.
 Backpropagation: Calculates gradients to update weights.
 Adam Optimizer: Optimizes weights with bias correction.
-Visualization: Plots the training loss curve.
+Visualization: Plots training loss curve and decision boundary.
 
-The project is designed to be beginner-friendly while offering insights into the inner workings of neural networks.
+The project is beginner-friendly and offers insights into neural network mechanics.
 
 📂 Project Structure
-neural_network_from_scartch/
+NeuralNetScratch/
 │
 ├── main.py                  # Entry point to run training
 ├── requirements.txt         # Required Python packages
 ├── README.md                # Project documentation
-├── plots/                   # Directory for loss curve images
+├── LICENSE                  # MIT License file
+├── .gitignore               # Ignores generated files (e.g., plots/)
+├── assets/                  # Directory for README images
+│   ├── loss_curve.png       # Loss curve image
+│   └── decision_boundary.png # Decision boundary image
 └── src/
     ├── model.py             # Neural network functions (initialize, forward, backward)
-    └── train.py             # Training loop and loss visualization
+    └── train.py             # Training loop and visualization
 
 
 ⚡ Features
@@ -39,6 +43,7 @@ Adam optimizer with bias correction
 
 Training Visualization:
 Loss curve saved as plots/loss_curve.png
+Decision boundary plot saved as plots/decision_boundary.png
 
 
 Synthetic Dataset:
@@ -62,7 +67,7 @@ pip install -r requirements.txt
 
 Clone the Repository:
 git clone https://github.com/huzaifa12466/NeuralNetScratch.git
-cd neural_network_from_scartch
+cd NeuralNetScratch
 
 
 Install Dependencies:
@@ -75,62 +80,76 @@ python main.py
 
 View Results:
 
-Training logs will be printed in the terminal.
-The loss curve will be saved as plots/loss_curve.png.
+Training logs printed in the terminal.
+Loss curve saved as plots/loss_curve.png.
+Decision boundary plot saved as plots/decision_boundary.png.
 
 
 
 
 🧠 How It Works
-1. Data Preparation
+
+Data Preparation
 
 Generates a synthetic 2D dataset using make_moons.
 Splits data into training and test sets.
 Transposes inputs and reshapes targets for matrix operations.
 
-2. Parameter Initialization
+
+Parameter Initialization
 
 Weights initialized using He initialization.
 Biases initialized to zeros.
 
-3. Forward Propagation
+
+Forward Propagation
 
 Hidden Layer: Z1 = W1 * X + b1, A1 = ReLU(Z1)
 Output Layer: Z2 = W2 * A1 + b2, y_hat = Sigmoid(Z2)
 
-4. Backpropagation & Optimization
+
+Backpropagation & Optimization
 
 Computes gradients for weights and biases in both layers.
 Applies Adam optimizer with bias correction for stable updates.
 Updates weights and biases iteratively.
 
-5. Loss Calculation
+
+Loss Calculation
 
 Uses binary cross-entropy loss.
-Plots and saves the loss curve for visualization.
+Plots and saves the loss curve and decision boundary for visualization.
+
+
 
 
 🖼️ Output
 
 Terminal Logs: Step-by-step training progress.
-Loss Curve: A plot of the training loss, saved as plots/loss_curve.png.
+Loss Curve: Training loss plot, saved as plots/loss_curve.png.
+Decision Boundary: Classification boundary visualization, saved as plots/decision_boundary.png.
 
 Example Loss Curve
-After 10 epochs, the loss curve typically shows smooth convergence, indicating effective learning.
+After 10 epochs, the loss curve shows smooth convergence, indicating effective learning.
+
+Example Decision Boundary
+Visualizes how the model separates the two classes in the make_moons dataset.
 
 
 💡 Notes
 
-Educational Purpose: This project is designed to help understand the mechanics of neural networks.
-Extensibility: Easily modify to use real-world datasets (e.g., Breast Cancer, Iris) or add more hidden layers.
-Customization: Adjust hyperparameters like learning rate or epochs in main.py for experimentation.
+Educational Purpose: Helps understand neural network mechanics.
+Extensibility: Modify for real-world datasets (e.g., Breast Cancer, Iris) or add layers.
+Customization: Adjust hyperparameters (learning rate, epochs) in main.py.
+.gitignore: The plots/ folder is ignored to avoid committing generated images.
 
 
 📚 Future Improvements
 
-Add support for deeper networks with configurable layers.
-Implement additional activation functions (e.g., tanh, Leaky ReLU).
+Support deeper networks with configurable layers.
+Add activation functions (e.g., tanh, Leaky ReLU).
 Include evaluation metrics like accuracy or confusion matrix.
+Add unit tests for model and training functions.
 
 
 🤝 Contributing
@@ -144,5 +163,7 @@ Open a pull request.
 
 
 📧 Contact
-For questions or suggestions, feel free to open an issue or contact the maintainer at <qhuzaifa675@gmail.com>.
+For questions or suggestions, open an issue or contact the maintainer at qhuzaifa675@gmail.com.
 
+📜 License
+This project is licensed under the MIT License. See the LICENSE file for details.
