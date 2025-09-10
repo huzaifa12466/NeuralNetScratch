@@ -1,2 +1,3 @@
 # Ignore plots folder
 plots/
+__pycache__/
