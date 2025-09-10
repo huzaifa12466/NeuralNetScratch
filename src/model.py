@@ -17,12 +17,12 @@ def update_parameters(parameters, y_train, y_hat, Z1, A1, X, eta=0.001, t=1):
     m = X.shape[1]
 
     grads = {}
-    # Output layer
+    # Output layer Sigmoid
     dZ2 = y_hat - y_train
     dW2 = (1/m) * np.dot(dZ2, A1.T)
     db2 = (1/m) * np.sum(dZ2, axis=1, keepdims=True)
 
-    # Hidden layer
+    # Hidden layer RELU
     dA1 = np.dot(parameters['W2'].T, dZ2)
     dZ1 = dA1 * (Z1 > 0)
     dW1 = (1/m) * np.dot(dZ1, X.T)
