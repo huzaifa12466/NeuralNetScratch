@@ -12,7 +12,7 @@ Visualization: Plots the training loss curve.
 The project is designed to be beginner-friendly while offering insights into the inner workings of neural networks.
 
 📂 Project Structure
-neural-network-scratch/
+neural_network_from_scartch/
 │
 ├── main.py                  # Entry point to run training
 ├── requirements.txt         # Required Python packages
