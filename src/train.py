@@ -55,7 +55,7 @@ def train_nn(X_train, y_train, layer_dims, epochs=10, eta=0.001):
     plt.contourf(xx, yy, y_pred_mesh, alpha=0.8, cmap=ListedColormap(('red','blue')))
     plt.scatter(X_train[0, :], X_train[1, :], c=y_train.ravel(), edgecolor='k', s=20)
     plt.title("Decision Boundary")
-    plt.savefig("plots/decision_boundary.png")  # Save BEFORE show
+    plt.savefig("plots/decision_boundary.png") 
     plt.show()
 
     return parameters, Loss
