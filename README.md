@@ -41,9 +41,6 @@ Backpropagation
 Adam optimizer with bias correction
 
 
-Training Visualization:
-Loss curve saved as plots/loss_curve.png
-Decision boundary plot saved as plots/decision_boundary.png
 
 
 Synthetic Dataset:
