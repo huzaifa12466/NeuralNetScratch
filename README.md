@@ -126,8 +126,8 @@ Plots and saves the loss curve and decision boundary for visualization.
 🖼️ Output
 
 Terminal Logs: Step-by-step training progress.
-Loss Curve: Training loss plot, saved as plots/loss_curve.png.
-Decision Boundary: Classification boundary visualization, saved as plots/decision_boundary.png.
+Loss Curve: Training loss plot, saved as ![Loss Curve](assets/loss_curve.png).
+Decision Boundary: Classification boundary visualization, saved as ![Loss Curve](assets/decision_boundary.png).
 
 Example Loss Curve
 After 10 epochs, the loss curve shows smooth convergence, indicating effective learning.
