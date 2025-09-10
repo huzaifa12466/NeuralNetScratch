@@ -61,7 +61,7 @@ pip install -r requirements.txt
 🚀 Getting Started
 
 Clone the Repository:
-git clone https://github.com/<your-username>/neural-network-scratch.git
+git clone https://github.com/huzaifa12466/NeuralNetScratch.git
 cd neural-network-scratch
 
 
